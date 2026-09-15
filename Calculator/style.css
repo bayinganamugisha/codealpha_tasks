@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3d7a0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator {
+    background: #ebeae7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.display {
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 24px;
+}
+#previous-operand {
+    color: #888;
+    font-size: 16px;
+    height: 20px;
+}
+#current-operand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Universal button styling */
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+/* Number and decimal buttons - light gray background */
+.number, .decimal {
+    background-color: #f0f0f0;
+    color: #222;
+}
+
+.number:hover, .decimal:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.number:active, .decimal:active {
+    background-color: #d0d0d0;
+    transform: scale(0.98);
+}
+
+/* Operator buttons - orange background */
+.operator {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+.operator:active {
+    background-color: #cc7700;
+    transform: scale(0.98);
+}
+
+/* Clear button - red background, spans 4 columns */
+#clear {
+    background-color: #ff3b30;
+    color: white;
+    grid-column: span 4;
+}
+
+#clear:hover {
+    background-color: #e63028;
+    transform: scale(1.02);
+}
+
+#clear:active {
+    background-color: #cc2820;
+    transform: scale(0.98);
+}
+
+/* Equals button - green background */
+#equals {
+    background-color: #34c759;
+    color: #fff;
+}
+
+#equals:hover {
+    background-color: #2aa84a;
+    transform: scale(1.05);
+}
+
+#equals:active {
+    background-color: #1f8c3d;
+    transform: scale(0.98);
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.display{
+    background: linear-gradient(300deg, #c5edaa, #eeeded, #f7e9c1);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    color: white;
+}

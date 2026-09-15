@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <h1>Novify</h1>
+
+        <img
+            id="album-art"
+            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500"
+            alt="Album artwork"
+        >
+        
+        <div class="song-info">
+            <p id="song-title">Song Title</p>
+            <p id="song-artist">Artist</p>
+        </div>
+        <div class="progress-container">
+
+                <span id="current-time">0:00</span>
+
+                <input
+                    type="range"
+                    id="progress-bar"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="duration">0:00</span>
+
+        </div>
+
+        <audio id="audio-player">
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="controls">
+
+            <button id="shuffle">🔀</button>
+
+            <button id="previous">⏮</button>
+
+            <button id="play">▶</button>
+
+            <button id="next">⏭</button>
+
+            <button id="repeat">🔁</button>
+
+        </div>
+
+        <div class="volume-container">
+
+            <span>🔊</span>
+
+            <input
+                type="range"
+                id="volume-control"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+            >
+
+        </div>
+        <div class="playlist">
+
+            <h3>Playlist</h3>
+
+            <div id="playlist-container"></div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
